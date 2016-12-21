@@ -8,9 +8,9 @@ public class GetArtistList
         self.repository = repository
     }
     
-    func searchArtist(artistQuery:String, getArtistListCallBack:([Artist]) -> Void)
+    func searchArtist(artistQuery:String, getArtistListCallBack: @escaping ([Artist]) -> Void)
     {
-        self.repository.getArtistList(name:"") { (artists) in
+        self.repository.getArtists(name:"") { (artists) in
             getArtistListCallBack(artists)
         }
     }

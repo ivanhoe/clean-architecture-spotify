@@ -6,7 +6,7 @@ class ViewController: UIViewController,ArtistView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        artistPresenter = ArtistPresenter(artistView:self, getArtistList:GetArtistList(repository:SpotifyRepository()))
+        artistPresenter = ArtistPresenter(artistView:self, getArtistList:GetArtistList(repository:SpotifyRepository(dataSourceFactory: DataSourceFactory())))
         
     }
     
@@ -21,9 +21,9 @@ class ViewController: UIViewController,ArtistView {
     }
 
     func showArtistsList(artist: [Artist]) {
-        for index in 0...10{
-            print(artist[index].name)
-        }
+    
+            print(artist[0].name)
+        
     }
 
 }

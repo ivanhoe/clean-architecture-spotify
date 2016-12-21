@@ -1,6 +1,6 @@
 
 protocol Repository
 {
-    func getArtistList( name:String, repositoryCallBack:([Artist]) -> Void)
+    func getArtists( name:String, repositoryCallBack: @escaping ([Artist]) -> Void)
     func getTopTracks() -> [Track]
 }
