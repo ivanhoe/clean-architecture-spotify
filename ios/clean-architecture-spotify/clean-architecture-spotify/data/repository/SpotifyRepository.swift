@@ -2,18 +2,24 @@
  
  class SpotifyRepository:Repository
  {
-    func getArtistList( name:String, repositoryCallBack:([Artist]) -> Void)
+    let dataSourceFactory:DataSourceFactory
+    
+    init(dataSourceFactory:DataSourceFactory) {
+        self.dataSourceFactory = dataSourceFactory
+    }
+    
+    func getArtists( name:String, repositoryCallBack: @escaping ([Artist]) -> Void)
     {
-        var artists:[Artist] = [Artist]()
-        let artist:Artist = Artist(name: "Muse",
-                                   popularity: "10",
-                                   followers: "10",
-                                   image: "http://")
-        for _ in 0...10 {
+            dataSourceFactory.create().getArtistEntityList(queryDS: "") { (artists) in
+            
+            let artist = Artist(name: artists[0].name + "Mappeado", popularity: artists[0].popularity + "Mappeado", followers: "", image: "")
+            
+            var artists:[Artist] = [Artist]()
             artists.append(artist)
+            repositoryCallBack(artists)
         }
-                
-        repositoryCallBack(artists)
+        
+        
     }
   
     func getTopTracks() -> [Track]

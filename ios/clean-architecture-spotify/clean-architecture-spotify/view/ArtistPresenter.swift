@@ -13,7 +13,7 @@ class ArtistPresenter
     func search(artistName:String)
     {
         getArtistList.searchArtist(artistQuery: artistName) { (artists) in
-            artistView.showArtistsList(artist: artists)
+            self.artistView.showArtistsList(artist: artists)
         }
     }
 }
