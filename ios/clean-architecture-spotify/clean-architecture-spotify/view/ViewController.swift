@@ -2,6 +2,9 @@ import UIKit
 
 class ViewController: UIViewController,ArtistView {
 
+    @IBOutlet weak var searchArtistInput : UITextField!
+    @IBOutlet weak var searchArtistButton : UIButton!
+    
     var artistPresenter:ArtistPresenter?
     
     override func viewDidLoad() {
@@ -10,11 +13,6 @@ class ViewController: UIViewController,ArtistView {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        artistPresenter?.search(artistName:"")
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
@@ -25,6 +23,13 @@ class ViewController: UIViewController,ArtistView {
             print(artist[0].name)
         
     }
+    
+ 
 
+    @IBAction func onSearchArtist(_ sender: Any) {
+        
+        let artistQuery:String = searchArtistInput.text!
+        artistPresenter?.search(artistName: artistQuery)
+    }
 }
 

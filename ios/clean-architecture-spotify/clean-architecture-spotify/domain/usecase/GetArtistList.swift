@@ -10,7 +10,7 @@ public class GetArtistList
     
     func searchArtist(artistQuery:String, getArtistListCallBack: @escaping ([Artist]) -> Void)
     {
-        self.repository.getArtists(name:"") { (artists) in
+        self.repository.getArtists(name:artistQuery) { (artists) in
             getArtistListCallBack(artists)
         }
     }
