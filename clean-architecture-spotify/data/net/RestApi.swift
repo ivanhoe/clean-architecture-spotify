@@ -1,5 +1,6 @@
 
-protocol RestApi
-{
-    func getArtistList(query:String,alamofireCallback: @escaping ([ArtistEntity]) -> Void)
+protocol RestApi {
+    associatedtype T
+    func getAll() -> [T]
+    func get(at index: Int) -> T
 }

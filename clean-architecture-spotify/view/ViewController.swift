@@ -4,12 +4,13 @@ class ViewController: UIViewController,ArtistView {
 
     @IBOutlet weak var searchArtistInput : UITextField!
     @IBOutlet weak var searchArtistButton : UIButton!
-    
+  
+    let locator = ServiceLocator()
     var artistPresenter:ArtistPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        artistPresenter = ArtistPresenter(artistView:self, getArtistList:GetArtistList(repository:SpotifyRepository(dataSourceFactory: DataSourceFactory())))
+        artistPresenter = ArtistPresenter(artistView:self, getArtistList: locator.getArtists)
         
     }
     
@@ -20,7 +21,7 @@ class ViewController: UIViewController,ArtistView {
 
     func showArtistsList(artist: [Artist]) {
     
-            print(artist[0].name)
+            print(artist)
         
     }
     

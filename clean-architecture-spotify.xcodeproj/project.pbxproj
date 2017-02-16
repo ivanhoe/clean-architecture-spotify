@@ -30,24 +30,22 @@
 		45ED5CF51E07427400308D89 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5CE81E07427400308D89 /* Mapper.swift */; };
 		45ED5CF61E07427400308D89 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5CE91E07427400308D89 /* Repository.swift */; };
 		45ED5CF71E07427400308D89 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5CE91E07427400308D89 /* Repository.swift */; };
-		45ED5CF91E0742B700308D89 /* SpotifyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5CF81E0742B700308D89 /* SpotifyRepository.swift */; };
-		45ED5CFA1E0742B700308D89 /* SpotifyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5CF81E0742B700308D89 /* SpotifyRepository.swift */; };
 		45ED5D141E07455F00308D89 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D0F1E07455F00308D89 /* Artist.swift */; };
 		45ED5D151E07455F00308D89 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D0F1E07455F00308D89 /* Artist.swift */; };
-		45ED5D161E07455F00308D89 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D101E07455F00308D89 /* Track.swift */; };
-		45ED5D171E07455F00308D89 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D101E07455F00308D89 /* Track.swift */; };
-		45ED5D181E07455F00308D89 /* GetArtistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D121E07455F00308D89 /* GetArtistList.swift */; };
-		45ED5D191E07455F00308D89 /* GetArtistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D121E07455F00308D89 /* GetArtistList.swift */; };
-		45ED5D1D1E07457800308D89 /* GetTopTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D1C1E07457800308D89 /* GetTopTracks.swift */; };
-		45ED5D1E1E07457800308D89 /* GetTopTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D1C1E07457800308D89 /* GetTopTracks.swift */; };
+		45ED5D181E07455F00308D89 /* GetArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D121E07455F00308D89 /* GetArtists.swift */; };
+		45ED5D191E07455F00308D89 /* GetArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D121E07455F00308D89 /* GetArtists.swift */; };
 		45ED5D231E07843500308D89 /* CloudDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D221E07843500308D89 /* CloudDatasource.swift */; };
 		45ED5D241E07843500308D89 /* CloudDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5D221E07843500308D89 /* CloudDatasource.swift */; };
+		A12EA37F1E55852100B91F8F /* NewArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA37E1E55852100B91F8F /* NewArtist.swift */; };
+		A12EA3801E55867200B91F8F /* NewArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA37E1E55852100B91F8F /* NewArtist.swift */; };
+		A12EA3851E563A1B00B91F8F /* ArtistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */; };
+		A12EA3861E563A1F00B91F8F /* ArtistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */; };
+		A12EA3891E5640D300B91F8F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3881E5640D300B91F8F /* ServiceLocator.swift */; };
+		A12EA38A1E5642A000B91F8F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3881E5640D300B91F8F /* ServiceLocator.swift */; };
 		A17FEE811E0A27B30073D153 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE801E0A27B30073D153 /* RestApi.swift */; };
 		A17FEE821E0A27B30073D153 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE801E0A27B30073D153 /* RestApi.swift */; };
 		A17FEE841E0A28710073D153 /* AlamofireRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE831E0A28710073D153 /* AlamofireRestApi.swift */; };
 		A17FEE851E0A28710073D153 /* AlamofireRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE831E0A28710073D153 /* AlamofireRestApi.swift */; };
-		A17FEE871E0A32020073D153 /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE861E0A32020073D153 /* DataSourceFactory.swift */; };
-		A17FEE881E0A32020073D153 /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE861E0A32020073D153 /* DataSourceFactory.swift */; };
 		DF1314C452C6FE3D40C9EA3E /* Pods_clean_architecture_spotifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C540F6F366E7831A500B4F /* Pods_clean_architecture_spotifyUITests.framework */; };
 		E4A89467639BC055A061BA39 /* Pods_clean_architecture_spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB16D6ACBA311566A421EB2A /* Pods_clean_architecture_spotify.framework */; };
 /* End PBXBuildFile section */
@@ -94,18 +92,17 @@
 		45ED5CE61E07427400308D89 /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		45ED5CE81E07427400308D89 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		45ED5CE91E07427400308D89 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		45ED5CF81E0742B700308D89 /* SpotifyRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyRepository.swift; sourceTree = "<group>"; };
 		45ED5D0F1E07455F00308D89 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		45ED5D101E07455F00308D89 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		45ED5D121E07455F00308D89 /* GetArtistList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetArtistList.swift; sourceTree = "<group>"; };
-		45ED5D1C1E07457800308D89 /* GetTopTracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopTracks.swift; sourceTree = "<group>"; };
+		45ED5D121E07455F00308D89 /* GetArtists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetArtists.swift; sourceTree = "<group>"; };
 		45ED5D221E07843500308D89 /* CloudDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDatasource.swift; sourceTree = "<group>"; };
 		67C540F6F366E7831A500B4F /* Pods_clean_architecture_spotifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture_spotifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		797C121E8AB8642F3CD30000 /* Pods-clean-architecture-spotifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotifyUITests/Pods-clean-architecture-spotifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83565537E6899E330EB02B1B /* Pods-clean-architecture-spotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotify/Pods-clean-architecture-spotify.debug.xcconfig"; sourceTree = "<group>"; };
+		A12EA37E1E55852100B91F8F /* NewArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArtist.swift; sourceTree = "<group>"; };
+		A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsRepository.swift; sourceTree = "<group>"; };
+		A12EA3881E5640D300B91F8F /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = "clean-architecture-spotify/data/repository/ServiceLocator.swift"; sourceTree = SOURCE_ROOT; };
 		A17FEE801E0A27B30073D153 /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		A17FEE831E0A28710073D153 /* AlamofireRestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRestApi.swift; sourceTree = "<group>"; };
-		A17FEE861E0A32020073D153 /* DataSourceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceFactory.swift; sourceTree = "<group>"; };
 		B7CAEABC7BFEC474A8FDDBD7 /* Pods-clean-architecture-spotifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotifyTests/Pods-clean-architecture-spotifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB134D272EA5C7ECC86EF9DF /* Pods-clean-architecture-spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotify.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotify/Pods-clean-architecture-spotify.release.xcconfig"; sourceTree = "<group>"; };
 		FB16D6ACBA311566A421EB2A /* Pods_clean_architecture_spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture_spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +170,7 @@
 		45ED5C791E073C4000308D89 /* clean-architecture-spotify */ = {
 			isa = PBXGroup;
 			children = (
+				A12EA3871E56403D00B91F8F /* di */,
 				458D92F71E09859A00D05A83 /* view */,
 				45ED5D0E1E07455F00308D89 /* domain */,
 				45ED5CDE1E07427400308D89 /* data */,
@@ -229,7 +227,7 @@
 			children = (
 				45ED5CE51E07427400308D89 /* datasource */,
 				45ED5CE91E07427400308D89 /* Repository.swift */,
-				45ED5CF81E0742B700308D89 /* SpotifyRepository.swift */,
+				A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -240,7 +238,6 @@
 				45ED5D221E07843500308D89 /* CloudDatasource.swift */,
 				45ED5CE61E07427400308D89 /* Datasource.swift */,
 				45ED5CE71E07427400308D89 /* mapper */,
-				A17FEE861E0A32020073D153 /* DataSourceFactory.swift */,
 			);
 			path = datasource;
 			sourceTree = "<group>";
@@ -256,8 +253,8 @@
 		45ED5D0E1E07455F00308D89 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				A12EA37E1E55852100B91F8F /* NewArtist.swift */,
 				45ED5D0F1E07455F00308D89 /* Artist.swift */,
-				45ED5D101E07455F00308D89 /* Track.swift */,
 				45ED5D111E07455F00308D89 /* usecase */,
 			);
 			path = domain;
@@ -266,8 +263,7 @@
 		45ED5D111E07455F00308D89 /* usecase */ = {
 			isa = PBXGroup;
 			children = (
-				45ED5D121E07455F00308D89 /* GetArtistList.swift */,
-				45ED5D1C1E07457800308D89 /* GetTopTracks.swift */,
+				45ED5D121E07455F00308D89 /* GetArtists.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -280,6 +276,15 @@
 				67C540F6F366E7831A500B4F /* Pods_clean_architecture_spotifyUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A12EA3871E56403D00B91F8F /* di */ = {
+			isa = PBXGroup;
+			children = (
+				A12EA3881E5640D300B91F8F /* ServiceLocator.swift */,
+			);
+			name = di;
+			path = ../../../../Desktop/di;
 			sourceTree = "<group>";
 		};
 		A17FEE771E0A236A0073D153 /* net */ = {
@@ -589,24 +594,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ED5CEA1E07427400308D89 /* ArtistEntity.swift in Sources */,
-				A17FEE871E0A32020073D153 /* DataSourceFactory.swift in Sources */,
 				45ED5D231E07843500308D89 /* CloudDatasource.swift in Sources */,
+				A12EA3851E563A1B00B91F8F /* ArtistsRepository.swift in Sources */,
 				45ED5C7B1E073C4000308D89 /* AppDelegate.swift in Sources */,
 				45ED5CEE1E07427400308D89 /* ArtistImageEntity.swift in Sources */,
 				A17FEE841E0A28710073D153 /* AlamofireRestApi.swift in Sources */,
 				45ED5CF41E07427400308D89 /* Mapper.swift in Sources */,
-				45ED5D181E07455F00308D89 /* GetArtistList.swift in Sources */,
+				45ED5D181E07455F00308D89 /* GetArtists.swift in Sources */,
 				A17FEE811E0A27B30073D153 /* RestApi.swift in Sources */,
 				45ED5CF01E07427400308D89 /* ArtistResponseEntity.swift in Sources */,
-				45ED5CF91E0742B700308D89 /* SpotifyRepository.swift in Sources */,
 				45ED5CEC1E07427400308D89 /* ArtistFollowerEntity.swift in Sources */,
 				45ED5CF21E07427400308D89 /* Datasource.swift in Sources */,
 				458D92FB1E09859A00D05A83 /* ViewController.swift in Sources */,
 				45ED5CF61E07427400308D89 /* Repository.swift in Sources */,
-				45ED5D1D1E07457800308D89 /* GetTopTracks.swift in Sources */,
+				A12EA37F1E55852100B91F8F /* NewArtist.swift in Sources */,
+				A12EA3891E5640D300B91F8F /* ServiceLocator.swift in Sources */,
 				45ED5D141E07455F00308D89 /* Artist.swift in Sources */,
 				458D92FA1E09859A00D05A83 /* ArtistPresenter.swift in Sources */,
-				45ED5D161E07455F00308D89 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,23 +618,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12EA38A1E5642A000B91F8F /* ServiceLocator.swift in Sources */,
 				45ED5CF31E07427400308D89 /* Datasource.swift in Sources */,
 				A17FEE851E0A28710073D153 /* AlamofireRestApi.swift in Sources */,
-				45ED5D171E07455F00308D89 /* Track.swift in Sources */,
 				45ED5CF11E07427400308D89 /* ArtistResponseEntity.swift in Sources */,
 				45ED5CF51E07427400308D89 /* Mapper.swift in Sources */,
+				A12EA3861E563A1F00B91F8F /* ArtistsRepository.swift in Sources */,
 				45ED5CF71E07427400308D89 /* Repository.swift in Sources */,
 				45ED5C901E073C4100308D89 /* clean_architecture_spotifyTests.swift in Sources */,
 				45ED5CEF1E07427400308D89 /* ArtistImageEntity.swift in Sources */,
 				45ED5CED1E07427400308D89 /* ArtistFollowerEntity.swift in Sources */,
-				45ED5CFA1E0742B700308D89 /* SpotifyRepository.swift in Sources */,
-				45ED5D191E07455F00308D89 /* GetArtistList.swift in Sources */,
+				45ED5D191E07455F00308D89 /* GetArtists.swift in Sources */,
+				A12EA3801E55867200B91F8F /* NewArtist.swift in Sources */,
 				45ED5D151E07455F00308D89 /* Artist.swift in Sources */,
 				45ED5D241E07843500308D89 /* CloudDatasource.swift in Sources */,
-				45ED5D1E1E07457800308D89 /* GetTopTracks.swift in Sources */,
 				45ED5CEB1E07427400308D89 /* ArtistEntity.swift in Sources */,
 				A17FEE821E0A27B30073D153 /* RestApi.swift in Sources */,
-				A17FEE881E0A32020073D153 /* DataSourceFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

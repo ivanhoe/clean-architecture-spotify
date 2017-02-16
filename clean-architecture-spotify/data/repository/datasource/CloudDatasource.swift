@@ -1,21 +1,16 @@
 
 import Foundation
 
-class CloudDatasource:Datasource
-{
-    let restApi: RestApi
-    
-    init(restApi:RestApi) {
-        self.restApi = restApi
-    }
-    
-    func getArtistEntityList(queryDS: String, dataSourceCallback: @escaping ([ArtistEntity]) -> Void) {
-        restApi.getArtistList(query: queryDS) { (artistEntities) in
-           
-            debugPrint(artistEntities[0].name)
-            
-            dataSourceCallback(artistEntities)
-            
-        }
-    }
+class CloudDatasource<T>: Datasource {
+   // let restApi: RestApi
+   // let query: String
+  
+    /*init(query: String) {
+      self.query = query
+    }*/
+  
+    var items: [T] = []
+    func getAll() -> [T] { return items }
+    func get(at index: Int) -> T { return items[index] }
+  
 }
