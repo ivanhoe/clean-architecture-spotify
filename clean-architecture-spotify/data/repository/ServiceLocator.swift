@@ -3,9 +3,13 @@ import Foundation
 
 class ServiceLocator {
 
-    lazy var cloudDataSource: CloudDatasource<Artist> = {
-        return CloudDatasource<Artist>()
-    }()
+    var alamofireRestApi: RestApi {
+      return AlamofireRestApi()
+    }
+		
+    var cloudDataSource: CloudDatasource {
+      return CloudDatasource(restApi: alamofireRestApi)
+    }
   
     var artistsRepository: Repository {
       return ArtistsRepository(datasource: cloudDataSource)
@@ -14,7 +18,5 @@ class ServiceLocator {
     var getArtists: GetArtists {
       return GetArtists(repository: artistsRepository)
     }
-		
-    
-
+  
 }

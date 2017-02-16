@@ -1,16 +1,16 @@
 
 import Foundation
 
-class CloudDatasource<T>: Datasource {
-   // let restApi: RestApi
-   // let query: String
+class CloudDatasource: Datasource {
   
-    /*init(query: String) {
-      self.query = query
-    }*/
+    let restApi: RestApi
   
-    var items: [T] = []
-    func getAll() -> [T] { return items }
-    func get(at index: Int) -> T { return items[index] }
+    init(restApi: RestApi) {
+      self.restApi = restApi
+    }
+  
+    func getAll() -> [Artist] { return restApi.getAll() }
+  
+    func get(at name: String) -> Artist { return restApi.get(at: name)}
   
 }

@@ -9,8 +9,7 @@ class ArtistPresenter {
     }
     
     func search(artistName: String) {
-      let artists = getArtistList.execute()
-      self.artistView.showArtistsList(artist: artists)
+      self.artistView.showArtistsList(artist: getArtistList.execute())
     }
 }
 

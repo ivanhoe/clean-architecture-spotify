@@ -20,9 +20,7 @@ class ViewController: UIViewController,ArtistView {
     }
 
     func showArtistsList(artist: [Artist]) {
-    
-            print(artist)
-        
+      print("value: \(artist)")
     }
     
  

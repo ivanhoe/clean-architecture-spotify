@@ -1,6 +1,5 @@
 
 protocol RestApi {
-    associatedtype T
-    func getAll() -> [T]
-    func get(at index: Int) -> T
+    func getAll() -> [Artist]
+    func get(at name: String) -> Artist
 }
