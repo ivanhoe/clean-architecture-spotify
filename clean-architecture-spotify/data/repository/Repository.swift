@@ -1,5 +1,5 @@
 
 protocol Repository {
-    func getAll() -> [Artist]
-    func get(at name: String) -> Artist
+    func getAll(at query: String, completion: @escaping ([Artist]) -> ())
+    func get(at name: String, completion: @escaping (Artist) -> ())
 }

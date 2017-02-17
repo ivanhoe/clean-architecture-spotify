@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController,ArtistView {
+class ViewController: UIViewController, ArtistsUI {
 
     @IBOutlet weak var searchArtistInput : UITextField!
     @IBOutlet weak var searchArtistButton : UIButton!
@@ -10,8 +10,8 @@ class ViewController: UIViewController,ArtistView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        artistPresenter = ArtistPresenter(artistView:self, getArtistList: locator.getArtists)
-        
+      artistPresenter = ArtistPresenter(ui: self , getArtists: locator.getArtists)
+  
     }
     
     override func didReceiveMemoryWarning() {
@@ -19,16 +19,26 @@ class ViewController: UIViewController,ArtistView {
 
     }
 
-    func showArtistsList(artist: [Artist]) {
-      print("value: \(artist)")
+    func show(items: [Artist]) {
+      print("value: \(items)")
+    }
+  
+    func showLoader() {
+      //show a Loader
+    }
+  
+    func hideLoader() {
+      //hide a Loader
+    }
+  
+    func showEmptyCase() {
+      //show Empty Case
     }
     
- 
-
     @IBAction func onSearchArtist(_ sender: Any) {
-        
-        let artistQuery:String = searchArtistInput.text!
-        artistPresenter?.search(artistName: artistQuery)
+        let artistName: String = searchArtistInput.text!
+        artistPresenter?.searchArtist(query: artistName)
+        artistPresenter?.viewDidLoad()
     }
 }
 

@@ -9,8 +9,17 @@ class CloudDatasource: Datasource {
       self.restApi = restApi
     }
   
-    func getAll() -> [Artist] { return restApi.getAll() }
+    func getAll(at query: String, completion: @escaping ([Artist]) -> ()) {
+      restApi.getAll(at: query) { artists in
+        completion(artists)
+      }
+    }
   
-    func get(at name: String) -> Artist { return restApi.get(at: name)}
+  
+    func get(at name: String, completion: @escaping (Artist) -> ()) {
+      restApi.get(at: name) { artist in
+        completion(artist)
+      }
+    }
   
 }
