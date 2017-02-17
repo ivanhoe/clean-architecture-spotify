@@ -1,5 +1,4 @@
 
-struct ArtistImageEntity
-{
-    let imageURL:String
+struct ArtistImageEntity {
+    let imageURL: String
 }

@@ -1,5 +1,4 @@
 
-struct ArtistResponseEntity
-{
-    let artists:[ArtistEntity]
+struct ArtistResponseEntity {
+    let artists: [ArtistEntity]
 }

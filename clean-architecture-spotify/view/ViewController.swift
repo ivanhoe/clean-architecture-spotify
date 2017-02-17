@@ -2,43 +2,40 @@ import UIKit
 
 class ViewController: UIViewController, ArtistsUI {
 
-    @IBOutlet weak var searchArtistInput : UITextField!
-    @IBOutlet weak var searchArtistButton : UIButton!
-  
+    @IBOutlet weak var searchArtistInput: UITextField!
+    @IBOutlet weak var searchArtistButton: UIButton!
+
     let locator = ServiceLocator()
-    var artistPresenter:ArtistPresenter?
-    
+    var artistPresenter: ArtistPresenter?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      artistPresenter = ArtistPresenter(ui: self , getArtists: locator.getArtists)
-  
+        artistPresenter = ArtistPresenter(ui: self, getArtists: locator.getArtists)
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
 
     func show(items: [Artist]) {
-      print("value: \(items)")
+        print("value: \(items)")
     }
-  
+
     func showLoader() {
-      //show a Loader
+        // show a Loader
     }
-  
+
     func hideLoader() {
-      //hide a Loader
+        // hide a Loader
     }
-  
+
     func showEmptyCase() {
-      //show Empty Case
+        // show Empty Case
     }
-    
-    @IBAction func onSearchArtist(_ sender: Any) {
+
+    @IBAction func onSearchArtist(_: Any) {
         let artistName: String = searchArtistInput.text!
         artistPresenter?.searchArtist(query: artistName)
         artistPresenter?.viewDidLoad()
     }
 }
-

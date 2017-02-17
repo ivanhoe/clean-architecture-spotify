@@ -1,5 +1,4 @@
 
-struct ArtistFollowerEntity
-{
-    let followersNumber:Int
+struct ArtistFollowerEntity {
+    let followersNumber: Int
 }

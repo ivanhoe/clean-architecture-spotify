@@ -1,6 +1,5 @@
 
-struct ArtistEntity
-{
-    let name:String
-    let popularity:String
+struct ArtistEntity {
+    let name: String
+    let popularity: String
 }
