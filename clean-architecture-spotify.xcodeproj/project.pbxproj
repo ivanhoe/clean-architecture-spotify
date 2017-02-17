@@ -40,8 +40,7 @@
 		A12EA3801E55867200B91F8F /* NewArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA37E1E55852100B91F8F /* NewArtist.swift */; };
 		A12EA3851E563A1B00B91F8F /* ArtistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */; };
 		A12EA3861E563A1F00B91F8F /* ArtistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */; };
-		A12EA3891E5640D300B91F8F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3881E5640D300B91F8F /* ServiceLocator.swift */; };
-		A12EA38A1E5642A000B91F8F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3881E5640D300B91F8F /* ServiceLocator.swift */; };
+		A12EA38C1E567BED00B91F8F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA38B1E567BED00B91F8F /* ServiceLocator.swift */; };
 		A17FEE811E0A27B30073D153 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE801E0A27B30073D153 /* RestApi.swift */; };
 		A17FEE821E0A27B30073D153 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE801E0A27B30073D153 /* RestApi.swift */; };
 		A17FEE841E0A28710073D153 /* AlamofireRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FEE831E0A28710073D153 /* AlamofireRestApi.swift */; };
@@ -100,7 +99,7 @@
 		83565537E6899E330EB02B1B /* Pods-clean-architecture-spotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotify/Pods-clean-architecture-spotify.debug.xcconfig"; sourceTree = "<group>"; };
 		A12EA37E1E55852100B91F8F /* NewArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArtist.swift; sourceTree = "<group>"; };
 		A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsRepository.swift; sourceTree = "<group>"; };
-		A12EA3881E5640D300B91F8F /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = "clean-architecture-spotify/data/repository/ServiceLocator.swift"; sourceTree = SOURCE_ROOT; };
+		A12EA38B1E567BED00B91F8F /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = di/ServiceLocator.swift; sourceTree = "<group>"; };
 		A17FEE801E0A27B30073D153 /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		A17FEE831E0A28710073D153 /* AlamofireRestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRestApi.swift; sourceTree = "<group>"; };
 		B7CAEABC7BFEC474A8FDDBD7 /* Pods-clean-architecture-spotifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotifyTests/Pods-clean-architecture-spotifyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +169,7 @@
 		45ED5C791E073C4000308D89 /* clean-architecture-spotify */ = {
 			isa = PBXGroup;
 			children = (
-				A12EA3871E56403D00B91F8F /* di */,
+				A12EA38D1E567C2300B91F8F /* di */,
 				458D92F71E09859A00D05A83 /* view */,
 				45ED5D0E1E07455F00308D89 /* domain */,
 				45ED5CDE1E07427400308D89 /* data */,
@@ -278,13 +277,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A12EA3871E56403D00B91F8F /* di */ = {
+		A12EA38D1E567C2300B91F8F /* di */ = {
 			isa = PBXGroup;
 			children = (
-				A12EA3881E5640D300B91F8F /* ServiceLocator.swift */,
+				A12EA38B1E567BED00B91F8F /* ServiceLocator.swift */,
 			);
 			name = di;
-			path = ../../../../Desktop/di;
 			sourceTree = "<group>";
 		};
 		A17FEE771E0A236A0073D153 /* net */ = {
@@ -593,6 +591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12EA38C1E567BED00B91F8F /* ServiceLocator.swift in Sources */,
 				45ED5CEA1E07427400308D89 /* ArtistEntity.swift in Sources */,
 				45ED5D231E07843500308D89 /* CloudDatasource.swift in Sources */,
 				A12EA3851E563A1B00B91F8F /* ArtistsRepository.swift in Sources */,
@@ -608,7 +607,6 @@
 				458D92FB1E09859A00D05A83 /* ViewController.swift in Sources */,
 				45ED5CF61E07427400308D89 /* Repository.swift in Sources */,
 				A12EA37F1E55852100B91F8F /* NewArtist.swift in Sources */,
-				A12EA3891E5640D300B91F8F /* ServiceLocator.swift in Sources */,
 				45ED5D141E07455F00308D89 /* Artist.swift in Sources */,
 				458D92FA1E09859A00D05A83 /* ArtistPresenter.swift in Sources */,
 			);
@@ -618,7 +616,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12EA38A1E5642A000B91F8F /* ServiceLocator.swift in Sources */,
 				45ED5CF31E07427400308D89 /* Datasource.swift in Sources */,
 				A17FEE851E0A28710073D153 /* AlamofireRestApi.swift in Sources */,
 				45ED5CF11E07427400308D89 /* ArtistResponseEntity.swift in Sources */,
