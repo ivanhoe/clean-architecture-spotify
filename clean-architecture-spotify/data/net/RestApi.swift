@@ -1,5 +1,5 @@
 
 protocol RestApi {
-  func getAll(at query: String, completion: @escaping ([Artist]) -> ())
-  func get(at name: String, completion: @escaping (Artist) -> ())
+  func getAll(at query: String, completion: @escaping ([ArtistEntity]) -> ())
+  func get(at name: String, completion: @escaping (ArtistEntity) -> ())
 }

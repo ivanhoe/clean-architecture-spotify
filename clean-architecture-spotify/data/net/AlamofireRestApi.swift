@@ -2,9 +2,10 @@
 import Alamofire
 
 class AlamofireRestApi: RestApi {
-    var artists: [Artist] = []
+  //  var artists: [Artist] = []
+   var artists: [ArtistEntity] = []
   
-    func getAll(at query: String, completion: @escaping ([Artist]) -> ()) {
+    func getAll(at query: String, completion: @escaping ([ArtistEntity]) -> ()) {
           Alamofire
             .request("https://api.spotify.com/v1/search?type=artist&q=\(query)")
             .responseJSON{ response in
@@ -12,14 +13,14 @@ class AlamofireRestApi: RestApi {
              print(json)
             // TODO PARSING JSON to return artists list
         
-             self.artists = self.getFakeArtistList()
+            // self.artists = self.getFakeArtistList()
         
             completion(self.artists)
         }
     }
   
   
-    func get(at name: String, completion: @escaping (Artist) -> ()) {
+    func get(at name: String, completion: @escaping (ArtistEntity) -> ()) {
       let artist = self.artists.filter{ $0.name == name }.first!
       completion(artist)
     }
