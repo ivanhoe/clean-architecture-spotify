@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AGs-iN-Jus">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AGs-iN-Jus">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,56 +9,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search Artist View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="clean_architecture_spotify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchArtistViewController" customModule="clean_architecture_spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bds-BQ-c5s" userLabel="searchTextField">
-                                <rect key="frame" x="158.66666666666666" y="353" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="aEw-qi-h8l"/>
-                                    <constraint firstAttribute="width" constant="97" id="nQ8-KE-Wuj"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ka-Y6-yvz" userLabel="searchButton">
-                                <rect key="frame" x="157" y="416.66666666666669" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Qgh-yg-Vv3"/>
-                                    <constraint firstAttribute="width" constant="100" id="XfM-bj-FLT"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="21q-rW-wlK">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="onSearchArtist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipF-OH-piQ"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LmE-Bc-thc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MLV-PR-5ON"/>
                                 </connections>
-                            </button>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-2I-LxG">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gXp-Rt-ugz"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9Ka-Y6-yvz" firstAttribute="top" secondItem="bds-BQ-c5s" secondAttribute="bottom" constant="33.5" id="N3R-ex-kpy"/>
-                            <constraint firstItem="9Ka-Y6-yvz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bIB-5j-ypf"/>
-                            <constraint firstItem="bds-BQ-c5s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i8z-t3-7a3"/>
-                            <constraint firstItem="bds-BQ-c5s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j1O-Fr-Zoi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="21q-rW-wlK" secondAttribute="bottom" id="9iX-ys-3L9"/>
+                            <constraint firstItem="Vse-2I-LxG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kso-9c-Kk4"/>
+                            <constraint firstItem="21q-rW-wlK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PTL-GA-zHJ"/>
+                            <constraint firstItem="21q-rW-wlK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wby-0F-W2g"/>
+                            <constraint firstAttribute="trailing" secondItem="21q-rW-wlK" secondAttribute="trailing" id="drM-XD-Jrl"/>
+                            <constraint firstAttribute="trailing" secondItem="Vse-2I-LxG" secondAttribute="trailing" id="mOT-dc-J3Q"/>
+                            <constraint firstItem="Vse-2I-LxG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q6L-ab-LMA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CdE-Ne-oVc"/>
                     <connections>
-                        <outlet property="searchArtistButton" destination="9Ka-Y6-yvz" id="wko-Ad-QLn"/>
-                        <outlet property="searchArtistInput" destination="bds-BQ-c5s" id="fMq-Yi-8lX"/>
+                        <outlet property="searchBar" destination="Vse-2I-LxG" id="u2L-zj-ydQ"/>
+                        <outlet property="tableView" destination="21q-rW-wlK" id="W2T-Yf-IiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
