@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0758550CB5B577399EC6AF7E /* Pods_clean_architecture_spotifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D84D9ECE37E3829FB3A13CC /* Pods_clean_architecture_spotifyTests.framework */; };
 		458D92FA1E09859A00D05A83 /* ArtistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D92F81E09859A00D05A83 /* ArtistPresenter.swift */; };
-		458D92FB1E09859A00D05A83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D92F91E09859A00D05A83 /* ViewController.swift */; };
+		458D92FB1E09859A00D05A83 /* SearchArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D92F91E09859A00D05A83 /* SearchArtistViewController.swift */; };
 		45ED5C7B1E073C4000308D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5C7A1E073C4000308D89 /* AppDelegate.swift */; };
 		45ED5C801E073C4000308D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45ED5C7E1E073C4000308D89 /* Main.storyboard */; };
 		45ED5C821E073C4000308D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ED5C811E073C4000308D89 /* Assets.xcassets */; };
@@ -72,7 +72,7 @@
 		1D84D9ECE37E3829FB3A13CC /* Pods_clean_architecture_spotifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture_spotifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF3F4E5831E259E9E8EF59E /* Pods-clean-architecture-spotifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture-spotifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-architecture-spotifyUITests/Pods-clean-architecture-spotifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		458D92F81E09859A00D05A83 /* ArtistPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistPresenter.swift; sourceTree = "<group>"; };
-		458D92F91E09859A00D05A83 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		458D92F91E09859A00D05A83 /* SearchArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchArtistViewController.swift; sourceTree = "<group>"; };
 		45ED5C771E073C4000308D89 /* clean-architecture-spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clean-architecture-spotify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED5C7A1E073C4000308D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED5C7F1E073C4000308D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			children = (
 				A12EA3901E576C5900B91F8F /* base */,
 				458D92F81E09859A00D05A83 /* ArtistPresenter.swift */,
-				458D92F91E09859A00D05A83 /* ViewController.swift */,
+				458D92F91E09859A00D05A83 /* SearchArtistViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -616,7 +616,7 @@
 				45ED5CF01E07427400308D89 /* ArtistResponseEntity.swift in Sources */,
 				45ED5CEC1E07427400308D89 /* ArtistFollowerEntity.swift in Sources */,
 				45ED5CF21E07427400308D89 /* Datasource.swift in Sources */,
-				458D92FB1E09859A00D05A83 /* ViewController.swift in Sources */,
+				458D92FB1E09859A00D05A83 /* SearchArtistViewController.swift in Sources */,
 				45ED5CF61E07427400308D89 /* Repository.swift in Sources */,
 				A12EA37F1E55852100B91F8F /* NewArtist.swift in Sources */,
 				45ED5D141E07455F00308D89 /* Artist.swift in Sources */,
