@@ -9,12 +9,14 @@ class AlamofireRestApi: RestApi {
         Alamofire
           .request("https://api.spotify.com/v1/search?type=artist&q=\(search)")
           .responseJSON{ response in
-              //let json = response.result.value as? [String: Any] 
+              // let json = response.result.value as? [String: Any]
+              //print(json)
               // TODO PARSING JSON to return artists list
+          
             
           }
-    self.artists = self.getFakeArtistList()
-    return artists
+       self.artists = self.getFakeArtistList()
+       return artists
     }
   
    func get(at name: String) -> Artist {
@@ -23,9 +25,10 @@ class AlamofireRestApi: RestApi {
   
   func getFakeArtistList() -> [Artist]{
      var fakeArtists: [Artist] = []
-     for (i, _) in fakeArtists.enumerated() {
-        fakeArtists.append(getFakeArtist(index: i))
-     }
+      for i in 0 ..< 10 {
+       fakeArtists.append(getFakeArtist(index: i))
+      }
+    
     return fakeArtists
   }
   
