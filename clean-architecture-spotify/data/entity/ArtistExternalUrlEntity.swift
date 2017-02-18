@@ -1,5 +1,5 @@
 //
-//	ArtistEntityImage.swift
+//	ArtistEntityExternalUrl.swift
 //
 //	Create by Ivan Alvarez on 17/2/2017
 //	Copyright © 2017. All rights reserved.
@@ -7,20 +7,16 @@
 
 import Foundation
 
-struct ArtistImageEntity {
+struct ArtistExternalUrlEntity{
 
-	var height : Int!
-	var url : String!
-	var width : Int!
+	var spotify : String!
 
 
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		height = dictionary["height"] as? Int
-		url = dictionary["url"] as? String
-		width = dictionary["width"] as? Int
+		spotify = dictionary["spotify"] as? String
 	}
 
 	/**
@@ -29,14 +25,8 @@ struct ArtistImageEntity {
 	func toDictionary() -> [String:Any]
 	{
 		var dictionary = [String:Any]()
-		if height != nil{
-			dictionary["height"] = height
-		}
-		if url != nil{
-			dictionary["url"] = url
-		}
-		if width != nil{
-			dictionary["width"] = width
+		if spotify != nil{
+			dictionary["spotify"] = spotify
 		}
 		return dictionary
 	}

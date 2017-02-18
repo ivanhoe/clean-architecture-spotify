@@ -6,4 +6,9 @@ struct NewArtist: Artist {
     let popularity: String
     let followers: String
     let image: String
+    
+    
+//    init(){
+//        
+//    }
 }
