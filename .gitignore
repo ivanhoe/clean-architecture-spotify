@@ -24,6 +24,7 @@ xcuserdata/
 *.xcscmblueprint
 *.gcda
 *.gcno
+*.DS_Store
 
 ### Objective-C ###
 # Xcode
