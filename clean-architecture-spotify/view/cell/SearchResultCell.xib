@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" id="ElF-2M-Wuw" userLabel="SearchResultCell" customClass="SearchResultCell" customModule="clean_architecture_spotify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ElF-2M-Wuw" id="7hk-3w-ZXM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="NmX-X3-FqR" userLabel="artistImageView">
+                        <rect key="frame" x="23" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="gaw-ur-1ah"/>
+                            <constraint firstAttribute="width" constant="60" id="sOa-mO-0k8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-x6-vZG" userLabel="artistNameLabel">
+                        <rect key="frame" x="98" y="8" width="214" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.11952973157167435" green="0.84221988916397095" blue="0.37440955638885498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYa-Li-owK" userLabel="followersLabel">
+                        <rect key="frame" x="98" y="30" width="206" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1y-j3-sfz" userLabel="popularityLabel">
+                        <rect key="frame" x="98" y="52" width="214" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.094398148357868195" green="0.082310862839221954" blue="0.082190252840518951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="dYa-Li-owK" secondAttribute="trailing" constant="8" id="5IW-DC-wtw"/>
+                    <constraint firstAttribute="trailing" secondItem="cv8-x6-vZG" secondAttribute="trailing" constant="8" id="8lI-5W-xTh"/>
+                    <constraint firstAttribute="trailing" secondItem="Z1y-j3-sfz" secondAttribute="trailing" constant="8" id="EHv-V3-S9S"/>
+                    <constraint firstItem="NmX-X3-FqR" firstAttribute="top" secondItem="7hk-3w-ZXM" secondAttribute="top" constant="10" id="Ir9-zh-tWc"/>
+                    <constraint firstItem="NmX-X3-FqR" firstAttribute="leading" secondItem="7hk-3w-ZXM" secondAttribute="leadingMargin" constant="15" id="XBd-uo-toN"/>
+                    <constraint firstItem="cv8-x6-vZG" firstAttribute="top" secondItem="7hk-3w-ZXM" secondAttribute="top" constant="8" id="Y7X-nW-le3"/>
+                    <constraint firstItem="cv8-x6-vZG" firstAttribute="leading" secondItem="NmX-X3-FqR" secondAttribute="trailing" constant="15" id="gFI-jr-1NB"/>
+                    <constraint firstItem="Z1y-j3-sfz" firstAttribute="top" secondItem="dYa-Li-owK" secondAttribute="bottom" constant="5" id="hxt-40-Z84"/>
+                    <constraint firstItem="dYa-Li-owK" firstAttribute="leading" secondItem="NmX-X3-FqR" secondAttribute="trailing" constant="15" id="uwP-bn-dK7"/>
+                    <constraint firstItem="dYa-Li-owK" firstAttribute="top" secondItem="cv8-x6-vZG" secondAttribute="bottom" constant="5" id="xPd-3F-EBC"/>
+                    <constraint firstItem="Z1y-j3-sfz" firstAttribute="leading" secondItem="NmX-X3-FqR" secondAttribute="trailing" constant="15" id="zBj-P7-QwH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistImageView" destination="NmX-X3-FqR" id="VRX-GW-736"/>
+                <outlet property="followersLabel" destination="dYa-Li-owK" id="BOJ-4T-Cua"/>
+                <outlet property="nameLabel" destination="cv8-x6-vZG" id="eyz-Gw-0Fi"/>
+                <outlet property="popularityLabel" destination="Z1y-j3-sfz" id="EvT-6s-mcg"/>
+            </connections>
+            <point key="canvasLocation" x="-152" y="63"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Placeholder" width="60" height="60"/>
+    </resources>
+</document>
