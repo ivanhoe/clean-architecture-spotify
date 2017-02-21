@@ -1,6 +1,0 @@
-framework module Pods_clean_architecture_spotifyTests {
-  umbrella header "Pods-clean-architecture-spotifyTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
