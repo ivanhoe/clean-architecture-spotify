@@ -7,10 +7,14 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
 
     let locator = ServiceLocator()
     var artistPresenter: ArtistPresenter?
+    var artistList: [Artist] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        setupArtistCells()
         artistPresenter = ArtistPresenter(ui: self, getArtists: locator.getArtists)
+        searchBar.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -18,7 +22,8 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
     }
 
     func show(items: [Artist]) {
-        print("value: \(items)")
+        artistList = items
+        tableView.reloadData()
     }
 
     func showLoader() {
@@ -32,28 +37,65 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
     func showEmptyCase() {
         // show Empty Case
     }
+
+    func setupTableView() {
+        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+        tableView.rowHeight = 80
+    }
+    func setupArtistCells() {
+
+        var cellNib = UINib(nibName: ArtistCellType.searchResultCell.rawValue, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.searchResultCell.rawValue)
+
+        cellNib = UINib(nibName: ArtistCellType.nothingFoundCell.rawValue, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.nothingFoundCell.rawValue)
+
+        cellNib = UINib(nibName: ArtistCellType.loadingCell.rawValue, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.loadingCell.rawValue)
+
+    }
 }
 
 extension SearchArtistViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         let artistName: String = searchBar.text!
         print("The search text is: '\(searchBar.text!)'")
         artistPresenter?.searchArtist(query: artistName)
         artistPresenter?.viewDidLoad()
 
     }
+
+    func position(for _: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
 }
 
 extension SearchArtistViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 0
+        return artistList.count
+    }
+
+    func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: ArtistCellType.searchResultCell.rawValue,
+                                                 for: indexPath) as! SearchResultCell
+        let artist = artistList[indexPath.row]
+        cell.configure(for: artist)
+        
+        return cell
     }
 
 }
 
 extension SearchArtistViewController: UITableViewDelegate {
-    func tableView(_: UITableView, cellForRowAt _: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
+
+}
+
+enum ArtistCellType: String {
+
+    case searchResultCell = "SearchResultCell"
+    case nothingFoundCell = "NothingFoundCell"
+    case loadingCell = "LoadingCell"
 
 }
