@@ -24,6 +24,10 @@ xcuserdata/
 *.xcscmblueprint
 *.gcda
 *.gcno
+<<<<<<< HEAD
+=======
+.DS_Store
+>>>>>>> feature/protocol-oriented-parsingEntities
 
 ### Objective-C ###
 # Xcode
@@ -49,7 +53,11 @@ DerivedData/
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
+<<<<<<< HEAD
 # Pods/
+=======
+Pods/
+>>>>>>> feature/protocol-oriented-parsingEntities
 
 # Carthage
 #
@@ -189,4 +197,7 @@ NextGen/Supporting Files/Settings.bundle/Pods-*
 
 #FauxPas
 FauxPasConfig/
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/protocol-oriented-parsingEntities

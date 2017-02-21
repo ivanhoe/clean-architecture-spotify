@@ -1,8 +1,9 @@
 
-struct Artist
-{
-    let name:String
-    let popularity:String
-    let followers:String
-    let image:String
+protocol Artist {
+    
+    var name: String { get }
+    var popularity: String { get }
+    var followers: String { get }
+    var imageURL: String { get }
+    
 }

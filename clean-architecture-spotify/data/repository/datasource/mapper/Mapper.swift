@@ -1,5 +1,3 @@
 
-public protocol Mapper
-{
-    
+public protocol Mapper {
 }

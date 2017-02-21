@@ -1,6 +1,5 @@
 
-protocol Repository
-{
-    func getArtists( name:String, repositoryCallBack: @escaping ([Artist]) -> Void)
-    func getTopTracks() -> [Track]
+protocol Repository {
+    func getAll(at query: String, completion: @escaping ([Artist]) -> Void)
+    func get(at name: String, completion: @escaping (Artist) -> Void)
 }
