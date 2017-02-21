@@ -38,20 +38,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gXp-Rt-ugz"/>
                                 </connections>
                             </searchBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3KP-sn-QSL">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.094398148357868195" green="0.082310862839221954" blue="0.082190252840518951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="21q-rW-wlK" secondAttribute="bottom" id="9iX-ys-3L9"/>
                             <constraint firstItem="Vse-2I-LxG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kso-9c-Kk4"/>
                             <constraint firstItem="21q-rW-wlK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PTL-GA-zHJ"/>
+                            <constraint firstItem="3KP-sn-QSL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SSN-IQ-B88"/>
                             <constraint firstItem="21q-rW-wlK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wby-0F-W2g"/>
                             <constraint firstAttribute="trailing" secondItem="21q-rW-wlK" secondAttribute="trailing" id="drM-XD-Jrl"/>
+                            <constraint firstItem="3KP-sn-QSL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eTs-MK-BAD"/>
                             <constraint firstAttribute="trailing" secondItem="Vse-2I-LxG" secondAttribute="trailing" id="mOT-dc-J3Q"/>
                             <constraint firstItem="Vse-2I-LxG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q6L-ab-LMA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CdE-Ne-oVc"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="3KP-sn-QSL" id="dAu-3j-hZI"/>
                         <outlet property="searchBar" destination="Vse-2I-LxG" id="u2L-zj-ydQ"/>
                         <outlet property="tableView" destination="21q-rW-wlK" id="W2T-Yf-IiM"/>
                     </connections>

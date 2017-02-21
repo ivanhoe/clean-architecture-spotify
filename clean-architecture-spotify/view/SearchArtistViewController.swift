@@ -4,6 +4,7 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     let locator = ServiceLocator()
     var artistPresenter: ArtistPresenter?
@@ -11,6 +12,7 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        activityIndicatorView.isHidden = true
         setupTableView()
         setupArtistCells()
         artistPresenter = ArtistPresenter(ui: self, getArtists: locator.getArtists)
@@ -28,10 +30,12 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
 
     func showLoader() {
         // show a Loader
+        activityIndicatorView.startAnimating()
     }
 
     func hideLoader() {
         // hide a Loader
+        activityIndicatorView.stopAnimating()
     }
 
     func showEmptyCase() {
