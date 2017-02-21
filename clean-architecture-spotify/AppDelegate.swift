@@ -1,14 +1,8 @@
-//
-//  AppDelegate.swift
-//  clean-architecture-spotify
-//
-//  Created by Iván Álvares Frías on 12/18/16.
-//  Copyright © 2016 Iván Álvares Frías. All rights reserved.
-//
 
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
