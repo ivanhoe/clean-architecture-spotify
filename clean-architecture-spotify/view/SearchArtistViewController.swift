@@ -39,7 +39,8 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
     }
 
     func showEmptyCase() {
-        // show Empty Case
+        artistList = []
+        tableView.reloadData()
     }
 
     func setupTableView() {
