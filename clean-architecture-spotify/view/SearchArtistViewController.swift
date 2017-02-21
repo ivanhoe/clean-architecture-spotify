@@ -12,7 +12,6 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        activityIndicatorView.isHidden = true
         setupTableView()
         setupArtistCells()
         artistPresenter = ArtistPresenter(ui: self, getArtists: locator.getArtists)
@@ -29,12 +28,10 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
     }
 
     func showLoader() {
-        // show a Loader
         activityIndicatorView.startAnimating()
     }
 
     func hideLoader() {
-        // hide a Loader
         activityIndicatorView.stopAnimating()
     }
 
@@ -48,16 +45,8 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
         tableView.rowHeight = 80
     }
     func setupArtistCells() {
-
-        var cellNib = UINib(nibName: ArtistCellType.searchResultCell.rawValue, bundle: nil)
+        let cellNib = UINib(nibName: ArtistCellType.searchResultCell.rawValue, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.searchResultCell.rawValue)
-
-        cellNib = UINib(nibName: ArtistCellType.nothingFoundCell.rawValue, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.nothingFoundCell.rawValue)
-
-        cellNib = UINib(nibName: ArtistCellType.loadingCell.rawValue, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.loadingCell.rawValue)
-
     }
 }
 
@@ -65,9 +54,8 @@ extension SearchArtistViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         let artistName: String = searchBar.text!
-        print("The search text is: '\(searchBar.text!)'")
         artistPresenter?.searchArtist(query: artistName)
-        artistPresenter?.viewDidLoad()
+        artistPresenter?.performSearch()
 
     }
 
@@ -98,9 +86,5 @@ extension SearchArtistViewController: UITableViewDelegate {
 }
 
 enum ArtistCellType: String {
-
     case searchResultCell = "SearchResultCell"
-    case nothingFoundCell = "NothingFoundCell"
-    case loadingCell = "LoadingCell"
-
 }

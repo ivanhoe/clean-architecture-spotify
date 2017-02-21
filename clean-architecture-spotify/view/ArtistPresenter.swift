@@ -8,9 +8,10 @@ class ArtistPresenter: Presenter {
         self.ui = ui
         self.getArtists = getArtists
     }
-
-    func viewDidLoad() {
+    
+    func performSearch() {
         self.ui.showLoader()
+        
         getArtists.execute(at: self.query) { artists in
             self.ui.hideLoader()
             if artists.isEmpty {
