@@ -1,19 +1,24 @@
 
 import Alamofire
 
+
 class AlamofireRestApi: RestApi {
-    
+
+    //artistEntityList
     var artists: [ArtistItemEntity] = []
 
     func getAll(at query: String, completion: @escaping ([ArtistItemEntity]) -> Void) {
         Alamofire
-            .request("https://api.spotify.com/v1/search?type=artist&q=\(query)")
+            .request("https://api.spotify.com/v1/search?type=artist&q=\(query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)")
             .responseJSON { response in
                 let json = response.result.value as? [String: Any]
-                let result = ArtistResponseEntity(fromDictionary: json!)
-                self.artists = result.artists.items
+                if json != nil {
+                    let result = ArtistResponseEntity(fromDictionary: json!)
+                    self.artists = result.artists.items
+                }
+                                
                 completion(self.artists)
-            }
+        }
     }
 
     func get(at name: String, completion: @escaping (ArtistItemEntity) -> Void) {
@@ -34,7 +39,7 @@ class AlamofireRestApi: RestApi {
         return NewArtist(name: "name\(index)",
                          popularity: "popularity \(index)",
                          followers: "followers\(index)",
-                         image: "image\(index)"
+                         imageURL: "image\(index)"
         )
     }
 }
