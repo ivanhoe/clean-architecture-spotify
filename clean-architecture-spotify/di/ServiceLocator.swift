@@ -1,11 +1,3 @@
-//
-//  ServiceLocator.swift
-//  clean-architecture-spotify
-//
-//  Created by Erik Jhordan González Reyes on 16/02/17.
-//  Copyright © 2017 Iván Álvares Frías. All rights reserved.
-//
-
 import Foundation
 
 class ServiceLocator {
@@ -25,4 +17,5 @@ class ServiceLocator {
     var getArtists: GetArtists {
         return GetArtists(repository: artistsRepository)
     }
+
 }
