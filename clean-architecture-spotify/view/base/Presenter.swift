@@ -1,7 +1,7 @@
 
 import Foundation
 
-public protocol Presenter {
+protocol Presenter {
 
     func viewDidLoad()
     func viewWillAppear()
@@ -10,8 +10,7 @@ public protocol Presenter {
     func viewDidDisappear()
 }
 
-public extension Presenter {
-
+extension Presenter {
     func viewWillAppear() {}
     func viewDidAppear() {}
     func viewWillDisappear() {}
@@ -24,4 +23,5 @@ public extension Presenter {
  */
 
 public protocol BaseUI {
+    
 }
