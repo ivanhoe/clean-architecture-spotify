@@ -82,7 +82,7 @@ extension SearchArtistViewController: UITableViewDataSource {
                                                  for: indexPath) as! SearchResultCell
         let artist = artistList[indexPath.row]
         cell.configure(for: artist)
-        
+
         return cell
     }
 
