@@ -34,6 +34,14 @@
 		8A47CEC21E57D066008EC4E5 /* ArtistImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47CEBC1E57D066008EC4E5 /* ArtistImageEntity.swift */; };
 		8A47CEC31E57D066008EC4E5 /* ArtistItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47CEBD1E57D066008EC4E5 /* ArtistItemEntity.swift */; };
 		8A47CEC41E57D066008EC4E5 /* ArtistResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47CEBE1E57D066008EC4E5 /* ArtistResponseEntity.swift */; };
+		8A58F4561E5A908E0036C049 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58F4551E5A908E0036C049 /* UIImageView+DownloadImage.swift */; };
+		8A58F4571E5A908E0036C049 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58F4551E5A908E0036C049 /* UIImageView+DownloadImage.swift */; };
+		8A58F45C1E5A91180036C049 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A58F4591E5A91180036C049 /* LoadingCell.xib */; };
+		8A58F45D1E5A91180036C049 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A58F4591E5A91180036C049 /* LoadingCell.xib */; };
+		8A58F45E1E5A91180036C049 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58F45A1E5A91180036C049 /* SearchResultCell.swift */; };
+		8A58F45F1E5A91180036C049 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58F45A1E5A91180036C049 /* SearchResultCell.swift */; };
+		8A58F4601E5A91180036C049 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A58F45B1E5A91180036C049 /* SearchResultCell.xib */; };
+		8A58F4611E5A91180036C049 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A58F45B1E5A91180036C049 /* SearchResultCell.xib */; };
 		A12EA37F1E55852100B91F8F /* NewArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA37E1E55852100B91F8F /* NewArtist.swift */; };
 		A12EA3801E55867200B91F8F /* NewArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA37E1E55852100B91F8F /* NewArtist.swift */; };
 		A12EA3851E563A1B00B91F8F /* ArtistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */; };
@@ -98,6 +106,10 @@
 		8A47CEBC1E57D066008EC4E5 /* ArtistImageEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistImageEntity.swift; sourceTree = "<group>"; };
 		8A47CEBD1E57D066008EC4E5 /* ArtistItemEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistItemEntity.swift; sourceTree = "<group>"; };
 		8A47CEBE1E57D066008EC4E5 /* ArtistResponseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistResponseEntity.swift; sourceTree = "<group>"; };
+		8A58F4551E5A908E0036C049 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		8A58F4591E5A91180036C049 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		8A58F45A1E5A91180036C049 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		8A58F45B1E5A91180036C049 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		A12EA37E1E55852100B91F8F /* NewArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArtist.swift; sourceTree = "<group>"; };
 		A12EA3841E563A1B00B91F8F /* ArtistsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsRepository.swift; sourceTree = "<group>"; };
 		A12EA38B1E567BED00B91F8F /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = di/ServiceLocator.swift; sourceTree = "<group>"; };
@@ -140,6 +152,7 @@
 		458D92F71E09859A00D05A83 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8A58F4581E5A91180036C049 /* cell */,
 				A12EA3901E576C5900B91F8F /* base */,
 				458D92F81E09859A00D05A83 /* ArtistPresenter.swift */,
 				458D92F91E09859A00D05A83 /* SearchArtistViewController.swift */,
@@ -172,6 +185,7 @@
 		45ED5C791E073C4000308D89 /* clean-architecture-spotify */ = {
 			isa = PBXGroup;
 			children = (
+				8A58F4541E5A908E0036C049 /* util */,
 				A12EA38D1E567C2300B91F8F /* di */,
 				458D92F71E09859A00D05A83 /* view */,
 				45ED5D0E1E07455F00308D89 /* domain */,
@@ -280,6 +294,24 @@
 				67C540F6F366E7831A500B4F /* Pods_clean_architecture_spotifyUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A58F4541E5A908E0036C049 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				8A58F4551E5A908E0036C049 /* UIImageView+DownloadImage.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		8A58F4581E5A91180036C049 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A58F4591E5A91180036C049 /* LoadingCell.xib */,
+				8A58F45A1E5A91180036C049 /* SearchResultCell.swift */,
+				8A58F45B1E5A91180036C049 /* SearchResultCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		A12EA38D1E567C2300B91F8F /* di */ = {
@@ -440,7 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ED5C851E073C4000308D89 /* LaunchScreen.storyboard in Resources */,
+				8A58F4601E5A91180036C049 /* SearchResultCell.xib in Resources */,
 				45ED5C821E073C4000308D89 /* Assets.xcassets in Resources */,
+				8A58F45C1E5A91180036C049 /* LoadingCell.xib in Resources */,
 				45ED5C801E073C4000308D89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +483,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A58F4611E5A91180036C049 /* SearchResultCell.xib in Resources */,
+				8A58F45D1E5A91180036C049 /* LoadingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,12 +652,14 @@
 				A12EA38F1E576C4A00B91F8F /* Presenter.swift in Sources */,
 				8A47CEC01E57D066008EC4E5 /* ArtistExternalUrlEntity.swift in Sources */,
 				A17FEE811E0A27B30073D153 /* RestApi.swift in Sources */,
+				8A58F45E1E5A91180036C049 /* SearchResultCell.swift in Sources */,
 				8A47CEC41E57D066008EC4E5 /* ArtistResponseEntity.swift in Sources */,
 				8A47CEC21E57D066008EC4E5 /* ArtistImageEntity.swift in Sources */,
 				45ED5CF21E07427400308D89 /* Datasource.swift in Sources */,
 				458D92FB1E09859A00D05A83 /* SearchArtistViewController.swift in Sources */,
 				45ED5CF61E07427400308D89 /* Repository.swift in Sources */,
 				8A47CEC31E57D066008EC4E5 /* ArtistItemEntity.swift in Sources */,
+				8A58F4561E5A908E0036C049 /* UIImageView+DownloadImage.swift in Sources */,
 				A12EA37F1E55852100B91F8F /* NewArtist.swift in Sources */,
 				45ED5D141E07455F00308D89 /* Artist.swift in Sources */,
 				458D92FA1E09859A00D05A83 /* ArtistPresenter.swift in Sources */,
@@ -636,10 +674,12 @@
 				A17FEE851E0A28710073D153 /* AlamofireRestApi.swift in Sources */,
 				45ED5CF51E07427400308D89 /* Mapper.swift in Sources */,
 				A12EA3861E563A1F00B91F8F /* ArtistsRepository.swift in Sources */,
+				8A58F45F1E5A91180036C049 /* SearchResultCell.swift in Sources */,
 				45ED5CF71E07427400308D89 /* Repository.swift in Sources */,
 				45ED5C901E073C4100308D89 /* clean_architecture_spotifyTests.swift in Sources */,
 				45ED5D191E07455F00308D89 /* GetArtists.swift in Sources */,
 				A12EA3801E55867200B91F8F /* NewArtist.swift in Sources */,
+				8A58F4571E5A908E0036C049 /* UIImageView+DownloadImage.swift in Sources */,
 				45ED5D151E07455F00308D89 /* Artist.swift in Sources */,
 				45ED5D241E07843500308D89 /* CloudDatasource.swift in Sources */,
 				A17FEE821E0A27B30073D153 /* RestApi.swift in Sources */,
