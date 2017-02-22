@@ -4,7 +4,6 @@ import Alamofire
 
 class AlamofireRestApi: RestApi {
 
-    //artistEntityList
     var artists: [ArtistItemEntity] = []
 
     func getAll(at query: String, completion: @escaping ([ArtistItemEntity]) -> Void) {
