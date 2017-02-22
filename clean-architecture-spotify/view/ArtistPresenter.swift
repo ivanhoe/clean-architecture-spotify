@@ -1,6 +1,6 @@
 
 class ArtistPresenter: Presenter {
-    let ui: ArtistsUI
+    weak var ui: ArtistsUI?
     let getArtists: GetArtists
     var query: String!
 
@@ -10,14 +10,14 @@ class ArtistPresenter: Presenter {
     }
     
     func performSearch() {
-        self.ui.showLoader()
+        self.ui?.showLoader()
         
         getArtists.execute(at: self.query) { artists in
-            self.ui.hideLoader()
+            self.ui?.hideLoader()
             if artists.isEmpty {
-                self.ui.showEmptyCase()
+                self.ui?.showEmptyCase()
             } else {
-                self.ui.show(items: artists)
+                self.ui?.show(items: artists)
             }
         }
     }
@@ -27,7 +27,7 @@ class ArtistPresenter: Presenter {
     }
 }
 
-protocol ArtistsUI: BaseUI {
+protocol ArtistsUI: class, BaseUI {
     func show(items: [Artist])
     func showLoader()
     func hideLoader()
