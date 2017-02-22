@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchArtistViewController: UIViewController, ArtistsUI {
+class SearchArtistViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -22,24 +22,6 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
         super.didReceiveMemoryWarning()
     }
 
-    func show(items: [Artist]) {
-        artistList = items
-        tableView.reloadData()
-    }
-
-    func showLoader() {
-        activityIndicatorView.startAnimating()
-    }
-
-    func hideLoader() {
-        activityIndicatorView.stopAnimating()
-    }
-
-    func showEmptyCase() {
-        artistList = []
-        tableView.reloadData()
-    }
-
     func setupTableView() {
         tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         tableView.rowHeight = 80
@@ -49,6 +31,9 @@ class SearchArtistViewController: UIViewController, ArtistsUI {
         tableView.register(cellNib, forCellReuseIdentifier: ArtistCellType.searchResultCell.rawValue)
     }
 }
+
+
+
 
 extension SearchArtistViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -61,6 +46,27 @@ extension SearchArtistViewController: UISearchBarDelegate {
 
     func position(for _: UIBarPositioning) -> UIBarPosition {
         return .topAttached
+    }
+}
+
+extension SearchArtistViewController: ArtistsUI {
+    
+    func show(items: [Artist]) {
+        artistList = items
+        tableView.reloadData()
+    }
+    
+    func showLoader() {
+        activityIndicatorView.startAnimating()
+    }
+    
+    func hideLoader() {
+        activityIndicatorView.stopAnimating()
+    }
+    
+    func showEmptyCase() {
+        artistList = []
+        tableView.reloadData()
     }
 }
 
